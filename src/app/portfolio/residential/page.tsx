@@ -71,7 +71,7 @@ export default function ResidentialInterior() {
             What Our Clients Say
           </h2>
           <div className="max-w-3xl mx-auto bg-gray-800 p-6 rounded-lg shadow-md">
-            <p className="text-lg italic">"{testimonials[0].feedback}"</p>
+            <p className="text-lg italic">quot;{testimonials[0].feedback}quot;</p>
             <p className="mt-4 text-yellow-400 font-semibold">
               - {testimonials[0].name}
             </p>
