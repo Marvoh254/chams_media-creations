@@ -19,7 +19,7 @@ export default function Home() {
             Transforming spaces with elegance & style
           </p>
           <p className="mt-2 text-2xl font-semibold italic text-yellow-400">
-            "Live Smarter, Live Better"
+            &quot;Live Smarter, Live Better&quot;
           </p>
           <a
             href="/portfolio"
