@@ -28,10 +28,11 @@ export default function About() {
             Our Mission
           </h2>
           <p className="mb-8">
-            {Our mission is to deliver stunning, personalized interior solutions
-            that enhance comfort and style while reflecting our clients' unique
-            personalities and needs.}
-          </p>
+  Our mission is to deliver stunning, personalized interior solutions
+  that enhance comfort and style while reflecting our clients&apos; unique
+  personalities and needs.
+</p>
+
 
           <h2 className="text-2xl font-semibold text-yellow-400 mb-4">
             Why Choose Us?
