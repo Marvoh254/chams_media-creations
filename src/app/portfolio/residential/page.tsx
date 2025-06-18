@@ -24,8 +24,8 @@ export default function ResidentialInterior() {
   return (
     <div className="bg-black text-white min-h-screen">
       <Navbar />
-      <br></br>
-      <br></br>
+      <br />
+      <br />
       <div className="container mx-auto px-6 py-12 text-center">
         <h1 className="text-4xl font-bold text-yellow-400 mb-6">
           Residential Interior Design
@@ -40,20 +40,23 @@ export default function ResidentialInterior() {
         <div className="relative max-w-4xl mx-auto overflow-hidden">
           <Image
             src={residentialProjects[currentIndex].image}
-            alt={residentialProjects[currentIndex].title}
+            alt={residentialProjects[currentIndex].title || "Residential project"}
             width={800}
             height={500}
             className="rounded-lg"
+            priority
           />
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 px-3 py-2 rounded"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 px-3 py-2 rounded hover:bg-yellow-400 hover:text-black transition"
+            aria-label="Previous Slide"
           >
             ❮
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 px-3 py-2 rounded"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 px-3 py-2 rounded hover:bg-yellow-400 hover:text-black transition"
+            aria-label="Next Slide"
           >
             ❯
           </button>
@@ -71,9 +74,11 @@ export default function ResidentialInterior() {
             What Our Clients Say
           </h2>
           <div className="max-w-3xl mx-auto bg-gray-800 p-6 rounded-lg shadow-md">
-            <p className="text-lg italic">quot;{testimonials[0].feedback}quot;</p>
+            <p className="text-lg italic">
+              "{testimonials[0].feedback}"
+            </p>
             <p className="mt-4 text-yellow-400 font-semibold">
-              - {testimonials[0].name}
+              – {testimonials[0].name}
             </p>
           </div>
         </div>
