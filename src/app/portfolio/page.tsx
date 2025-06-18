@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import Head from "next/head";
+import Link from "next/link";
 
 const portfolioItems = [
   {
@@ -28,6 +29,14 @@ const portfolioItems = [
 export default function Portfolio() {
   return (
     <div className="bg-black text-white min-h-screen">
+      <Head>
+        <title>Our Portfolio | Chams Media Creations</title>
+        <meta
+          name="description"
+          content="Explore our featured interior design projects and creative solutions by Chams Media Creations."
+        />
+      </Head>
+
       <Navbar />
       <br />
       <br />
@@ -41,17 +50,21 @@ export default function Portfolio() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {portfolioItems.map((item, index) => (
-            <Link key={index} href={item.link}>
-              <div className="bg-gray-800 p-6 rounded-lg hover:bg-yellow-400 hover:text-black transition duration-300 cursor-pointer">
+            <Link key={index} href={item.link} passHref legacyBehavior>
+              <a
+                className="block bg-gray-800 p-6 rounded-lg hover:bg-yellow-400 hover:text-black transition duration-300 cursor-pointer"
+                aria-label={`View portfolio for ${item.title}`}
+              >
                 <div className="flex flex-col items-center">
                   <span className="text-5xl mb-4">{item.icon}</span>
                   <h2 className="text-xl font-semibold">{item.title}</h2>
                 </div>
-              </div>
+              </a>
             </Link>
           ))}
         </div>
       </div>
+
       <Footer />
     </div>
   );
